@@ -4,11 +4,6 @@
  * @return Promise {access - boolean, userGroups - object) userGroups {}
  */
 getUserAccess: function (userId) {
-	// для тестов раздела
-	if (uriG.query.getUserEyes && ~[17591, 10842, 17168, 7149, 7459, 9049].indexOf(DATA.user.id)) userId = uriG.query.getUserEyes;
-	if (!userId) userId = DATA.user.id;
-	// для тестов раздела
-
 	var def = $.Deferred();
 	var userGroups = [];
 	var result = {
